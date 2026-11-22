@@ -1,0 +1,72 @@
+{
+  "lane": {
+    "width_m": 1.7,
+    "lane_margin_m": 0.15,
+    "inner_line_m": -0.35,
+    "outer_line_m": 1.2,
+    "inner_zone_m": [-2.6, -0.05],
+    "outer_zone_m": [0.8, 4.2]
+  },
+  "radar": {
+    "cluster_eps_m": 0.3,
+    "cluster_min_points": 2,
+    "max_range_m": 5.0,
+    "split_width_m": 0.62,
+    "torso_eps_m": 0.32,
+    "torso_min_points": 3,
+    "vehicle_min_width_m": 0.62,
+    "vehicle_max_height_m": 1.1,
+    "person_min_height_m": 1.15,
+    "height_available": true,
+    "min_rcs": -20.0
+  },
+  "tracker": {
+    "gate_base_m": 0.55,
+    "gate_speed_factor": 0.45,
+    "alpha": 0.65,
+    "beta": 0.2,
+    "confirm_hits": 3,
+    "max_miss": 6,
+    "max_miss_ms": 700,
+    "max_tracks": 24,
+    "cart_memory_ms": 1500,
+    "max_speed_mps": 3.0
+  },
+  "badge": {
+    "debounce_ms": 700,
+    "attach_before_ms": 3000,
+    "attach_after_ms": 1500
+  },
+  "door": {
+    "close_debounce_ms": 450,
+    "settle_ms": 1200,
+    "propped_ms": 20000,
+    "max_episode_ms": 120000
+  },
+  "beam": {
+    "enabled": true,
+    "min_person_block_ms": 120,
+    "cart_block_ms": 650,
+    "directional": true
+  },
+  "decision": {
+    "max_authorized_per_episode": 8,
+    "alarm_settle_ms": 700,
+    "alarm_max_delay_ms": 2500,
+    "alarm_on_suspect": true,
+    "vehicle_assume_operator": true,
+    "beam_raise_behind_vehicle": true,
+    "beam_raise_max": 1,
+    "zero_badge_alarm": true
+  },
+  "interlock": {
+    "lane_kind": "turnstile",
+    "stop_lane_on_alarm": true,
+    "stop_lane_on_suspect": true,
+    "latch_alarm": true,
+    "auto_clear_ms": 60000,
+    "clip_pre_ms": 5000,
+    "clip_post_ms": 5000,
+    "fail_secure_on_blind": true
+  }
+}
